@@ -1,199 +1,180 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-    <title>Plinko</title>
-    <meta name="description" content="WakeApp">
-    <meta name="gtm_name" content="plinko">
-    <link href="#" rel="shortcut icon" type="image/x-icon">
-    <meta name="theme-color" content="#139740">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="WakeApp">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="application-name" content="WakeApp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/lucid.css">
-    <script src="js/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/foundation-lib.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-</head>
-<body class="has-transparent-header height-100% _cera-pro no-recaptcha static-form-mob _form-only--en detect-lang landing-bet">
-    <div class="l-wrapper">
-        <main class="l-main" id="main">
-            <section class="section s-hero section-bg h100">
-                <div class="s-hero__bg">
-                    <img src="images/parallax1.png" class="parallax-desk1 hide-for-small-only" alt="">
-                    <img src="images/parallax2.png" class="parallax-desk2 hide-for-small-only" alt="">
-                    <div class="s-hero__bg-main _desktop bg-img hide-for-small-only"></div>
-                    <div class="s-hero__bg-main _mob bg-img show-for-small-only"></div>
-                </div>
-                <header class="s-hero__header">
-                    <a data-gtm="header_logo" class="b-logo" href="#">
-                        <img class="img-fluid" src="images/logo-plinko.png" width="100" height="20" alt="">
-                    </a>
-                </header>
-                <div class="main-section__container container show">
-                    <span class="nl-block none">
-                        <span class="game--text1">
-                            <span>Speel <span>het</span> spel</span>
-                        </span>
-                    </span>
-                    <span class="nl-block none">
-                        <span class="game--text2">
-                            <span>Ontvang een <span class="game--text2-bonus">bonus</span></span>
-                        </span>
-                    </span>
-                    <span class="nl-block none">
-                        <span class="game--text3">
-                            <span>Speel <span>het</span> spel</span>
-                            <span>Ontvang een <span class="game--text3-bonus">bonus</span></span>
-                        </span>
-                    </span>
-                    <div class="game--wrp ">
-                        <div id="plinkoGame" class="plinkoWrap"></div>
-                        <div class="control">
-                            <div class="bonus" id="bonus">
-                                <span class="nl-block none">WIN €0 BONUS</span>
-                            </div>
-                            <div class="playbtn playbtn-disable" id="playbtn"></div>
-                        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Plinko</title>
+        <meta name="description" content="WakeApp">
+        <meta name="gtm_name" content="plinko">
+        <link href="#" rel="shortcut icon" type="image/x-icon">
+        <meta name="theme-color" content="#139740">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="WakeApp">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="application-name" content="WakeApp">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/lucid.css">
+        <script src="js/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/foundation-lib.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+    </head>
+    <body class="has-transparent-header height-100%">
+        <div class="l-wrapper">
+            <main class="l-main" id="main">
+                <section class="section s-hero section-bg h100">
+                    <div class="s-hero__bg">
+                        <img src="images/parallax1.png" class="parallax-desk1" alt="">
+                        <img src="images/parallax2.png" class="parallax-desk2" alt="">
+                        <div class="s-hero__bg-main _desktop bg-img hide-for-small-only"></div>
+                        <div class="s-hero__bg-main _mob bg-img show-for-small-only"></div>
                     </div>
-                    <div class="game-outer" id="game-2" style="display: none">
-                        <div class="game_wrap">
-                            <div class="scratches_wrap">
-                                <div class="scratch_outer" id="scratch_1" data-attr="scratch_1">
-                                    <img class="scratch_action" width="250" height="175"
-                                        src="images/scratch-anim.png" alt="">
-                                    <img src="images/scratch-used.png" alt="" class="scratch_used">
-                                    <div class="scratch_txt">
-                                        <div class="bonus_1">
-                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
-                                        </div>
-                                        <div class="bonus_2">
-                                            <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
-                                        </div>
-                                        <div class="bonus_3">
-                                            <div class="gradient-txt bonus-wb-big" data-text=""></div>
+                    <header class="s-hero__header">
+                        <a data-gtm="header_logo" class="b-logo" href="#">
+                            <img class="img-fluid" src="images/logo-plinko.png" width="100" height="20" alt="">
+                        </a>
+                    </header>
+                    <div class="main-section__container container show">
+                        <span class="nl-block none">
+                            <span class="game--text1">
+                                <span>Speel <span>het</span> spel</span>
+                            </span>
+                        </span>
+                        <span class="nl-block none">
+                            <span class="game--text2">
+                                <span>Ontvang een <span class="game--text2-bonus">bonus</span></span>
+                            </span>
+                        </span>
+                        <span class="nl-block none">
+                            <span class="game--text3">
+                                <span>Speel <span>het</span> spel</span>
+                                <span>Ontvang een <span class="game--text3-bonus">bonus</span></span>
+                            </span>
+                        </span>
+                        <div class="game--wrp ">
+                            <div id="plinkoGame" class="plinkoWrap"></div>
+                            <div class="control">
+                                <div class="bonus" id="bonus">
+                                    <span class="nl-block none">WIN €0 BONUS</span>
+                                </div>
+                                <div class="playbtn playbtn-disable" id="playbtn"></div>
+                            </div>
+                        </div>
+                        <div class="game-outer" id="game-2" style="display: none">
+                            <div class="game_wrap">
+                                <div class="scratches_wrap">
+                                    <div class="scratch_outer" id="scratch_1" data-attr="scratch_1">
+                                        <img class="scratch_action" width="250" height="175"
+                                            src="images/scratch-anim.png" alt="">
+                                        <img src="images/scratch-used.png" alt="" class="scratch_used">
+                                        <div class="scratch_txt">
+                                            <div class="bonus_1">
+                                                <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
+                                            </div>
+                                            <div class="bonus_2">
+                                                <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
+                                            </div>
+                                            <div class="bonus_3">
+                                                <div class="gradient-txt bonus-wb-big" data-text=""></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="scratch_outer" id="scratch_2" data-attr="scratch_2">
-                                    <img class="scratch_action" width="250" height="175"
-                                        src="images/scratch-anim.png" alt="">
-                                    <img src="images/scratch-used.png" alt="" class="scratch_used">
-                                    <div class="scratch_txt">
-                                        <div class="bonus_1">
-                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
-                                        </div>
-                                        <div class="bonus_2">
-                                            <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
-                                        </div>
-                                        <div class="bonus_3">
-                                            <div class="gradient-txt bonus-wb-big" data-text=""></div>
+                                    <div class="scratch_outer" id="scratch_2" data-attr="scratch_2">
+                                        <img class="scratch_action" width="250" height="175"
+                                            src="images/scratch-anim.png" alt="">
+                                        <img src="images/scratch-used.png" alt="" class="scratch_used">
+                                        <div class="scratch_txt">
+                                            <div class="bonus_1">
+                                                <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
+                                            </div>
+                                            <div class="bonus_2">
+                                                <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
+                                            </div>
+                                            <div class="bonus_3">
+                                                <div class="gradient-txt bonus-wb-big" data-text=""></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="scratch_outer" id="scratch_3" data-attr="scratch_3">
-                                    <img class="scratch_action" width="250" height="175"
-                                        src="images/scratch-anim.png" alt="">
-                                    <img src="images/scratch-used.png" alt="" class="scratch_used">
-                                    <div class="scratch_txt">
-                                        <div class="bonus_1">
-                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
-                                        </div>
-                                        <div class="bonus_2">
-                                            <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
-                                        </div>
-                                        <div class="bonus_3">
-                                            <div class="gradient-txt bonus-wb-big" data-text=""></div>
+                                    <div class="scratch_outer" id="scratch_3" data-attr="scratch_3">
+                                        <img class="scratch_action" width="250" height="175"
+                                            src="images/scratch-anim.png" alt="">
+                                        <img src="images/scratch-used.png" alt="" class="scratch_used">
+                                        <div class="scratch_txt">
+                                            <div class="bonus_1">
+                                                <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
+                                            </div>
+                                            <div class="bonus_2">
+                                                <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
+                                            </div>
+                                            <div class="bonus_3">
+                                                <div class="gradient-txt bonus-wb-big" data-text=""></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="reg--wrp" style="display: none;">
-                    <div class="bonus-container">
-                        <div class="offer">
-                            <span class="none nl-block">GEFELICITEERD!</span>
+                    <div class="reg--wrp" style="display: none;">
+                        <div class="bonus-container">
+                            <div class="offer">
+                                <span class="none nl-block">GEFELICITEERD!</span>
+                            </div>
                         </div>
+                        <div class="cta-container">
+                            <div class="cta-text">
+                                <h3>Je hebt een cadeau gewonnen!</h3>
+                                <p id="final-bonus-text">2000€ + 250 GRATIS SPINS!</p>
+                            </div>
+                        </div>
+                        <a class="claim-bonus-btn" href="#">CLAIM BONUS!</a> <!-- Редирект -->
                     </div>
-                    <div class="cta-container">
-                        <div class="cta-text" style="display: flex; flex-direction: column; align-items: center;">
-                            <h3 style="font-size: 3rem; font-weight: 700; text-transform: uppercase;">Je hebt een cadeau gewonnen!</h3>
-                            <p id="final-bonus-text">2000€ + 250 GRATIS SPINS!</p>
-                        </div>
-                    <a class="claim-bonus-btn" href="#">CLAIM BONUS!</a> <!-- Редирект -->
+                </section>
+            </main>
+        </div>
+        <div class="intermediate-popup" id="intermediate-popup">
+            <div class="intermediate-popup-content">
+                <div class="bonus-container">
+                    <div class="offer">
+                        <span class="none nl-block">GEFELICITEERD!</span>
+                    </div>
                 </div>
-            </section>
-        </main>
-    </div>
-    <div id="intermediate-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-        <div style="cursor: pointer;z-index: 21;margin: 0;width: 85%;position: absolute;padding: 35px 10px;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 600px;border-radius: 37px;background: #222222 !important;opacity: 1;visibility: visible;-webkit-box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);-moz-box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);-webkit-backdrop-filter: blur(20px);backdrop-filter: blur(20px);">
-            <div class="bonus-container">
-                <div class="offer">
-                    <span class="none nl-block">GEFELICITEERD!</span>
+                <div class="cta-container">
+                    <div class="cta-text">
+                        <h3>Je hebt een cadeau gewonnen!</h3>
+                        <p>1000€!</p>
+                    </div>
+                    <div class="media-container"></div>
+                    <button class="claim-bonus-btn" id="continue-btn" type="button">DOORGAAN</button>
                 </div>
-            </div>
-            <div class="cta-container">
-                <div class="cta-text" style="display: flex; flex-direction: column; align-items: center;">
-                    <h3 style="font-size: 3rem; font-weight: 700; text-transform: uppercase;">Je hebt een cadeau gewonnen!</h3>
-                    <p>1000€!</p>
-                </div>
-                <div class="media-container"></div>
-                <button id="continue-btn" class="claim-bonus-btn">DOORGAAN</button>
             </div>
         </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('continue-btn').addEventListener('click', function() {
-                document.getElementById('intermediate-popup').style.display = 'none';
-                document.querySelector('.main-section__container').style.margin = '0';
-                document.querySelector('.game--wrp').style.display = 'none';
-                document.getElementById('game-2').style.display = 'block';
-                
-                // Меняем текст для стирашек
-                const gameText3 = document.querySelector('.game--text3');
-                gameText3.innerHTML = '<span>Klik <span>en</span></span><span>win een <span class="game--text3-bonus">prijs</span></span>';
-                
-                // Стирашки готовы к использованию
-            });
-        });
-    </script>
-    <script>
-        function parallax() {
-            var parallax = $('.parallax-desk1');
-            var parallax2 = $('.parallax-desk2');
-            var layer = $('#main');
-            layer.mousemove(function (e) {
-                var ivalueX = (e.pageX * -1 / 30);
-                var ivalueY = (e.pageY * -1 / 30);
-                var bvalueX = (e.pageX * 1 / 10);
-                var bvalueY = (e.pageY * 1 / 10);
-                parallax.css('transform', 'translate3d(' + ivalueX + 'px,' + ivalueY + 'px, 0)');
-                parallax2.css('transform', 'translate3d(' + bvalueX + 'px,' + bvalueY + 'px, 0)');
-            });
-        }
-        parallax();
-    </script>
-    <script src="js/p5.min.js"></script>
-    <script src="js/matter.min.js"></script>
-    <script src="js/scratch.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/plinko_game.js"></script>
-    <script src="js/init_plinko.js"></script>
-</body>
-
+        <script>
+            function parallax() {
+                var parallax = $('.parallax-desk1');
+                var parallax2 = $('.parallax-desk2');
+                var layer = $('#main');
+                layer.mousemove(function (e) {
+                    var ivalueX = (e.pageX * -1 / 30);
+                    var ivalueY = (e.pageY * -1 / 30);
+                    var bvalueX = (e.pageX * 1 / 10);
+                    var bvalueY = (e.pageY * 1 / 10);
+                    parallax.css('transform', 'translate3d(' + ivalueX + 'px,' + ivalueY + 'px, 0)');
+                    parallax2.css('transform', 'translate3d(' + bvalueX + 'px,' + bvalueY + 'px, 0)');
+                });
+            }
+            parallax();
+        </script>
+        <script src="js/p5.min.js"></script>
+        <script src="js/matter.min.js"></script>
+        <script src="js/scratch.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/plinko_game.js"></script>
+        <script src="js/init_plinko.js"></script>
+        <script src="js/game-sequence.js"></script>
+    </body>
 </html>

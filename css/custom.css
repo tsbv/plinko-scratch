@@ -28,10 +28,10 @@ template {
     display: grid;
     flex-direction: column;
     text-align: center;
-    gap: 25px;
+    gap: 18px;
     align-items: center;
     justify-content: center;
-    margin: 1rem auto 16rem;
+    margin: 1rem auto 1rem;
     max-width: 100rem;
 }
 .scratch_outer {
@@ -440,7 +440,11 @@ a:hover {
     background-clip: text;
     color: transparent;
 }
-
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .cta-text p {
     font-size: 4.5rem;
     background: linear-gradient(45deg, #ff8a00, #ff4500);
@@ -454,6 +458,9 @@ a:hover {
 
 .cta-text h3 {
     text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .claim-bonus-btn {
@@ -466,7 +473,8 @@ a:hover {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
+    text-align: center;
     background: linear-gradient(45deg, #ff8a00, #ff4500);
     border: none;
     border-radius: 50px;
@@ -824,16 +832,16 @@ html[lang|="fr"] .playbtn {
 .parallax-desk1 {
     position: absolute;
     top: 5rem;
-    left: 18rem;
+    left: 26rem;
     z-index: 1;
-    width: 68.1rem;
+    width: 91.1rem;
     height: 91.1rem;
 }
 
 .parallax-desk2 {
     position: absolute;
     top: 5rem;
-    right: 14rem;
+    right: 19rem;
     z-index: 1;
     width: 70.4rem;
     height: 101.19rem;
@@ -1011,6 +1019,16 @@ html[lang|="fr"] .playbtn {
 
 @media print,
 screen and (max-width: 47.99875em) {
+    .parallax-desk1,
+    .parallax-desk2 {
+        display: none;
+    }
+    
+    .show-parallax-mobile .parallax-desk1,
+    .show-parallax-mobile .parallax-desk2 {
+        display: block;
+        transform: none !important;
+    }
     .main-section__container {
         flex-direction: column;
     }
@@ -1242,5 +1260,43 @@ screen and (max-width: 576px) {
 
     .left {
         margin-bottom: -12px;
+    }
+}
+.intermediate-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.intermediate-popup-content {
+    cursor: pointer;
+    z-index: 21;
+    margin: 0;
+    width: 85%;
+    position: absolute;
+    padding: 35px 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    border-radius: 37px;
+    background: #222222 !important;
+    opacity: 1;
+    visibility: visible;
+    -webkit-box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);
+    -moz-box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);
+    box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+@media (min-width: 768px) {
+    .s-hero__header {
+        position: static;
     }
 }
