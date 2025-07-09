@@ -26,12 +26,12 @@ template {
 }
 .scratches_wrap {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
     text-align: center;
-    gap: 5px 0;
+    gap: 25px;
     align-items: center;
     justify-content: center;
-    margin: 9rem auto 16rem;
+    margin: 1rem auto 16rem;
     max-width: 100rem;
 }
 .scratch_outer {
