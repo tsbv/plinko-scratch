@@ -24,17 +24,9 @@ function updateBonus(bonusSum) {
 }
 function gameOver() {
     setTimeout(() => {
-        $('.main-section__container').removeClass('show');
-        $(".modal--img").removeClass('modal--hide');
-        $(".section.h100").addClass('opened');
-        $(".reg--wrp").addClass('show');
-        $(".modal--back").addClass('show');
+        document.getElementById('intermediate-popup').style.display = 'flex';
     }, 500);
     playBtn.classList.add("playbtn-disable");
-    if (canStartGame) {
-        startPlinko(5, 3); // Запустить игру только если пользователь нажал на playBtn
-        canStartGame = false; // Сбросить флаг после начала игры
-    }
 }
 
 $(".close--reg").on('click', function() {

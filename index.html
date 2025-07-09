@@ -54,13 +54,6 @@
                             <span>Ontvang een <span class="game--text3-bonus">bonus</span></span>
                         </span>
                     </span>
-                    <span class="fr-block none">
-                        <img src="images/text1fr.svg" alt="" class="game--text1">
-                    </span>
-                    <span class="fr-block none">
-                        <img src="images/text2fr.svg" alt="" class="game--text2">
-                    </span>
-                    <span class="fr-block none"><img src="images/text--mobfr.svg" alt="" class="game--text3"></span>
                     <div class="game--wrp ">
                         <div id="plinkoGame" class="plinkoWrap"></div>
                         <div class="control">
@@ -84,10 +77,10 @@
                                     <img src="images/scratch-used.png" alt="" class="scratch_used">
                                     <div class="scratch_txt">
                                         <div class="bonus_1">
-                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS"></div>
+                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
                                         </div>
                                         <div class="bonus_2">
-                                            <div class="gradient-txt bonus-wb-small" data-text="1000€"></div>
+                                            <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
                                         </div>
                                         <div class="bonus_3">
                                             <div class="gradient-txt bonus-wb-big" data-text=""></div>
@@ -100,10 +93,10 @@
                                     <img src="images/scratch-used.png" alt="" class="scratch_used">
                                     <div class="scratch_txt">
                                         <div class="bonus_1">
-                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS"></div>
+                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
                                         </div>
                                         <div class="bonus_2">
-                                            <div class="gradient-txt bonus-wb-small" data-text="1000€"></div>
+                                            <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
                                         </div>
                                         <div class="bonus_3">
                                             <div class="gradient-txt bonus-wb-big" data-text=""></div>
@@ -116,10 +109,10 @@
                                     <img src="images/scratch-used.png" alt="" class="scratch_used">
                                     <div class="scratch_txt">
                                         <div class="bonus_1">
-                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS"></div>
+                                            <div class="gradient-txt bonus-wb-medium" data-text="250FS">250FS</div>
                                         </div>
                                         <div class="bonus_2">
-                                            <div class="gradient-txt bonus-wb-small" data-text="1000€"></div>
+                                            <div class="gradient-txt bonus-wb-small" data-text="1000€">1000€</div>
                                         </div>
                                         <div class="bonus_3">
                                             <div class="gradient-txt bonus-wb-big" data-text=""></div>
@@ -130,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reg--wrp">
+                <div class="reg--wrp" style="display: none;">
                     <div class="bonus-container">
                         <div class="offer">
                             <span class="none nl-block">GEFELICITEERD!</span>
@@ -139,7 +132,7 @@
                     <div class="cta-container">
                         <div class="cta-text" style="display: flex; flex-direction: column; align-items: center;">
                             <h3 style="font-size: 3rem; font-weight: 700; text-transform: uppercase;">You've Won A Gift!</h3>
-                            <p>450€ + 250 GRATIS SPINS!</p>
+                            <p id="final-bonus-text">2000€ + 250 GRATIS SPINS!</p>
                         </div>
                     <div class="media-container">
                                 
@@ -149,6 +142,26 @@
             </section>
         </main>
     </div>
+    <div id="intermediate-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; max-width: 400px;">
+            <h2>Поздравляем!</h2>
+            <p>Вы выиграли 1000€!</p>
+            <button id="continue-btn" style="padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Продолжить</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('continue-btn').addEventListener('click', function() {
+                document.getElementById('intermediate-popup').style.display = 'none';
+                document.querySelector('.main-section__container').style.margin = '0';
+                document.querySelector('.game--wrp').style.display = 'none';
+                document.getElementById('game-2').style.display = 'block';
+                
+                // Стирашки готовы к использованию
+            });
+        });
+    </script>
     <script>
         function parallax() {
             var parallax = $('.parallax-desk1');
@@ -165,13 +178,13 @@
         }
         parallax();
     </script>
-    <script type="text/javascript" src="js/p5.min.js"></script>
-    <script type="text/javascript" src="js/matter.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/plinko_game.js" defer></script>
-    <script src="js/init_plinko.js" defer></script>
+    <script src="js/p5.min.js"></script>
+    <script src="js/matter.min.js"></script>
     <script src="js/scratch.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/plinko_game.js"></script>
+    <script src="js/init_plinko.js"></script>
 </body>
 
 </html>
