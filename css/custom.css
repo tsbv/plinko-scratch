@@ -461,10 +461,11 @@ a:hover {
     width: 80%;
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 20px 30px;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
     color: white;
     background: linear-gradient(45deg, #ff8a00, #ff4500);
     border: none;
@@ -518,12 +519,6 @@ a:hover {
 .s-hero__header .b-logo {
     display: inline-block;
     width: auto;
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-    .s-hero__header .b-logo {
-        margin: 0 auto;
-    }
 }
 
 .main-section__container {
@@ -1187,7 +1182,7 @@ screen and (max-width: 47.99875em) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 0 30px;
-        margin: 60px auto 20px auto;
+        margin: 65px auto 20px auto;
         max-width: 350px;
         width: 100%;
         text-transform: uppercase;
