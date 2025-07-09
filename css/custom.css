@@ -118,6 +118,15 @@ template {
     transform: translate(-50%);
     text-align: center;
     width: 100%;
+    font-family: "Luckiest Guy", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(137deg, #fff600 0%, #fff379 33.17%, #fffcad 48.08%, #fffb00 61.06%, #ffb700 82.69%, #fc0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1px rgba(255, 0, 191, 0.79)) drop-shadow(4px 4px 1px #800);
 }
 .confetti,
 .jsgif,
@@ -433,7 +442,7 @@ a:hover {
 }
 
 .cta-text p {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     background: linear-gradient(45deg, #ff8a00, #ff4500);
     -webkit-background-clip: text;
     background-clip: text;

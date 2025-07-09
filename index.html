@@ -13,6 +13,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="application-name" content="WakeApp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/lucid.css">
     <script src="js/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +61,7 @@
                         <div id="plinkoGame" class="plinkoWrap"></div>
                         <div class="control">
                             <div class="bonus" id="bonus">
-                                <span class="nl-block none">WIN $0 BONUS</span>
+                                <span class="nl-block none">WIN €0 BONUS</span>
                             </div>
                             <div class="playbtn playbtn-disable" id="playbtn"></div>
                         </div>
@@ -141,16 +144,16 @@
         <div style="cursor: pointer;z-index: 21;margin: 0;width: 85%;position: absolute;padding: 35px 10px;top: 50%;left: 50%;transform: translate(-50%, -50%);max-width: 600px;border-radius: 37px;background: #222222 !important;opacity: 1;visibility: visible;-webkit-box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);-moz-box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);box-shadow: 1px 0px 10px 10px rgba(255, 102, 51, 0.9);-webkit-backdrop-filter: blur(20px);backdrop-filter: blur(20px);">
             <div class="bonus-container">
                 <div class="offer">
-                    <span class="none nl-block">ПОЗДРАВЛЯЕМ!</span>
+                    <span class="none nl-block">GEFELICITEERD!</span>
                 </div>
             </div>
             <div class="cta-container">
                 <div class="cta-text" style="display: flex; flex-direction: column; align-items: center;">
-                    <h3 style="font-size: 3rem; font-weight: 700; text-transform: uppercase;">You've Won A Gift!</h3>
+                    <h3 style="font-size: 3rem; font-weight: 700; text-transform: uppercase;">Je hebt een cadeau gewonnen!</h3>
                     <p>1000€!</p>
                 </div>
                 <div class="media-container"></div>
-                <button id="continue-btn" class="claim-bonus-btn">ПРОДОЛЖИТЬ</button>
+                <button id="continue-btn" class="claim-bonus-btn">DOORGAAN</button>
             </div>
         </div>
     </div>
@@ -162,6 +165,10 @@
                 document.querySelector('.main-section__container').style.margin = '0';
                 document.querySelector('.game--wrp').style.display = 'none';
                 document.getElementById('game-2').style.display = 'block';
+                
+                // Меняем текст для стирашек
+                const gameText3 = document.querySelector('.game--text3');
+                gameText3.innerHTML = '<span>Klik <span>en</span></span><span>win een <span class="game--text3-bonus">prijs</span></span>';
                 
                 // Стирашки готовы к использованию
             });

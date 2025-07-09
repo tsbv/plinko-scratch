@@ -10,7 +10,7 @@ function bUpdate() {
     if (curBonus < realBonus) {
         curBonus += 5;
         var div = document.getElementById('bonus');
-        div.innerHTML = '<span class="nl-block none">WIN $' + curBonus + ' BONUS</span><span class="fr-block none">GAGNER ' + curBonus + '$ BONUS</span>';
+        div.innerHTML = '<span class="nl-block none">WIN €' + curBonus + ' BONUS</span><span class="fr-block none">WIN €' + curBonus + ' BONUS</span>';
     }
     if (playBtnEnabled) playBtn.classList.remove("playbtn-disable");
     else playBtn.classList.add("playbtn-disable");
@@ -37,6 +37,6 @@ $(".close--reg").on('click', function() {
     $(".reg--wrp").removeClass('show');
     resetGame();
     var div = document.getElementById('bonus');
-    div.innerHTML = '<span class="nl-block none">WIN $' + curBonus + ' BONUS</span><span class="fr-block none">GAGNER ' + curBonus + '$ BONUS</span>';
+    div.innerHTML = '<span class="nl-block none">WIN €' + curBonus + ' BONUS</span><span class="fr-block none">GAGNER €' + curBonus + ' BONUS</span>';
     canStartGame = true;
 });
