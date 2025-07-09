@@ -51,7 +51,11 @@
                 if (usageCounter === maxUsages) {
                     setTimeout(function () {
                         document.getElementById('game-2').style.display = 'none';
-                        document.querySelector('.reg--wrp').style.display = 'block';
+                        document.querySelector('.game--text3').style.display = 'none';
+                        const regWrp = document.querySelector('.reg--wrp');
+                        regWrp.style.display = 'block';
+                        regWrp.style.visibility = 'visible';
+                        regWrp.style.opacity = '1';
                     }, 1500);
                 }
             }
